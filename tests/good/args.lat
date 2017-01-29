@@ -1,0 +1,5 @@
+int main() { return 0; }
+void a (int c) {}
+void b (int c, int d, int e) {}
+void c (int a, boolean b, int c, int d) {}
+
