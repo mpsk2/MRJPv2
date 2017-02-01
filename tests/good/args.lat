@@ -1,5 +1,9 @@
 int main() { return 0; }
-void a (int c) {}
-void b (int c, int d, int e) {}
-void c (int a, boolean b, int c, int d) {}
-
+void a (int c) {
+	c = 1;
+}
+void b (int c, int d, int e) {
+	c = 1+2+3+4;
+}
+void c (int p, boolean q, int r, int s) {}
+void d(int a, int b, int c, int d, int e, int f, int g, int h, int i, int j, int k, int l, int m, int n) {}
