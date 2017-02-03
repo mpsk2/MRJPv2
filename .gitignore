@@ -1,5 +1,3 @@
-tests/*/*.s
-tests/*/*.out
 *.swp
 dist
 dist-*

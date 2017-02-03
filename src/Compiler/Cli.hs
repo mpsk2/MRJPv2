@@ -20,9 +20,9 @@ options =
   [ Option "h" ["help"]
     (NoArg
       (\_ -> do
-	prg <- getProgName
-	hPutStrLn stderr (usageInfo (usageInfoHeader prg) options)
-	exitWith ExitSuccess))
+        prg <- getProgName
+        hPutStrLn stderr (usageInfo (usageInfoHeader prg) options)
+        exitWith ExitSuccess))
       "Show help"
   ]
 
@@ -50,5 +50,5 @@ asmName fileName | strEndsWith fileName ".lat" = (Prelude.take ((Prelude.length 
                  | otherwise = fileName ++ ".s"
 
 binName :: String -> String
-binName fileName | strEndsWith fileName ".lat" = (Prelude.take ((Prelude.length fileName) - 4) fileName) ++ ".out"
+binName fileName | strEndsWith fileName ".lat" = (Prelude.take ((Prelude.length fileName) - 4) fileName)
                  | otherwise = "your_file_had_bad_extension.out"

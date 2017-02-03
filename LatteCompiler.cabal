@@ -17,6 +17,6 @@ executable lattec
 library
   exposed-modules:     Latte.Lex, Latte.Skel, Latte.Print, Latte.ErrM, Latte.Par, Latte.Abs
   -- other-modules:       
-  build-depends:       base ==4.6.*, strings, directory, process, array
+  build-depends:       base, strings, directory, process, array
   hs-source-dirs:      src/Lang
   build-tools:         alex, happy

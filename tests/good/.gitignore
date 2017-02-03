@@ -1,0 +1,7 @@
+# .gitignore to only keep .gitignore and *.lat
+
+*
+
+!.gitignore
+!*.lat
+
