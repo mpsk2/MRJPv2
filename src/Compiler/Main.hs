@@ -9,7 +9,18 @@ import Cli
 import Compile
 import Compile.Visit
 import Latte
+import Latte.Abs
 import Latte.Par
+import Validate
+
+handleValidate :: Program -> IO ()
+handleValidate p = do
+    v <- validate p
+    case v of
+        Right _ -> return ()
+        Left e -> do
+            putStrLn $ show e
+            exitFailure 
 
 main :: IO ()
 main = do
@@ -23,6 +34,8 @@ main = do
 
     rightProgram <- runFile 0 pProgram inputFileName
     let program = head $ rights [rightProgram]
+
+    handleValidate program
 
     -- Compile below
     let asmFileName = asmName inputFileName

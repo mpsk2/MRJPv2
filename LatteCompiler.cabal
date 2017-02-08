@@ -12,11 +12,11 @@ cabal-version:       >=1.8
 executable lattec
   main-is:             Main.hs
   hs-source-dirs:      src/Compiler
-  build-depends:       strings, base, directory, process, LatteCompilerLang, transformers, mtl, containers
+  build-depends:       strings, base, directory, process, LatteCompilerLang, transformers, mtl, containers, lens
 
 library
   exposed-modules:     Latte.Lex, Latte.Skel, Latte.Print, Latte.ErrM, Latte.Par, Latte.Abs
   -- other-modules:       
-  build-depends:       base, strings, directory, process, array
+  build-depends:       base, strings, directory, process, array, lens
   hs-source-dirs:      src/Lang
   build-tools:         alex, happy
